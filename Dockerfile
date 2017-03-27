@@ -11,5 +11,7 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 VOLUME [ "/sys/fs/cgroup" ]
+RUN yum -y install epel-release; \
+yum clean all
 RUN yum -y install R
 CMD ["/usr/sbin/init"]
