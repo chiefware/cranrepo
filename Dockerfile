@@ -14,5 +14,5 @@ VOLUME [ "/sys/fs/cgroup" ]
 RUN yum -y install epel-release wget; \
 yum clean all
 RUN yum -y install R
-RUN wget https://github.com/chiefware/cranrepo/blob/master/cran.cmd -O /cran.cmd
+RUN wget https://raw.githubusercontent.com/chiefware/cranrepo/master/cran.cmd -O cran.cmd
 CMD ["/usr/sbin/init"]
